@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="row app-menu">
+        <a class="col-6 text-center p-3" href="{% url 'villager:villager_create' %}">
+            <div class="custom-margin-20">
+                <img class="img-fluid" src="{% static 'images/icons/registration.png' %}" alt="">
+                <h5>নিবন্ধন</h5>
+            </div>
+        </a>
+        <a class="col-6 text-center p-3" href="{% url 'villager:villager_search' %}">
+            <div class="custom-margin-20">
+                <img class="img-fluid" src="{% static 'images/icons/family_search.png' %}" alt="">
+                <h5>Search Family</h5>
+            </div>
+        </a>
+        <a class="col-6 text-center p-3" href="#">
+            <div class="custom-margin-20">
+                <img class="img-fluid" src="{% static 'images/icons/book_with_light.png' %}" alt="">
+                <h5>E-Learning</h5>
+            </div>
+        </a>
+        <a class="col-6 text-center p-3" href="#">
+            <div class="custom-margin-20">
+                <img class="img-fluid" src="{% static 'images/icons/med_kit.png' %}" alt="">
+                <h5>Emergency Help</h5>
+            </div>
+        </a>
+        <a class="col-6 text-center p-3" href="#">
+            <div class="custom-margin-20">
+                <img class="img-fluid" src="{% static 'images/icons/notification.png' %}" alt="">
+                <h5>Notification</h5>
+            </div>
+        </a>
+        <a class="col-6 text-center p-3" href="#">
+            <div class="custom-margin-20">
+                <img class="img-fluid" src="{% static 'images/icons/group_profile.png' %}" alt="">
+                <h5>Group</h5>
+            </div>
+        </a>
+    </div>
+{% endblock %}

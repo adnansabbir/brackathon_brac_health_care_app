@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="pb-5">
+        <div class="form-with-white-bg">
+            {% if messages %}
+                {% for message in messages %}
+                    <div {% if message.tags == 'success' %} class="alert alert-success"{% endif %}>
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <div class="text-center">
+                <img src="{{ villager.image.url }}" class="rounded img-thumbnail w-50 " alt="{{ villager }}">
+                <h2>{{ villager }}</h2>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-6"><strong>Name</strong>:</div>
+                <div class="col-6">{{ villager.name }}</div>
+
+                <div class="col-6"><strong>Gender</strong>:</div>
+                <div class="col-6">{{ villager.get_gender_display }}</div>
+
+                <div class="col-6"><strong>Date of Birth</strong>:</div>
+                <div class="col-6">{{ villager.date_of_birth }}</div>
+
+                <div class="col-6"><strong>Registration No</strong>:</div>
+                <div class="col-6">{{ villager.reg_no }}</div>
+
+                <div class="col-6"><strong>Package</strong>:</div>
+                <div class="col-6">{{ villager.get_package_display }}</div>
+
+                <div class="col-6"><strong>Phone</strong>:</div>
+                <div class="col-6">{{ villager.phone }}</div>
+
+                <div class="col-6"><strong>NID</strong>:</div>
+                <div class="col-6">{{ villager.nid }}</div>
+
+                <div class="col-6"><strong>Last Follow Up Date</strong>:</div>
+                <div class="col-6">{{ villager.follow_up_date }}</div>
+
+                <div class="col-6"><strong>Last Remark</strong>:</div>
+                <div class="col-6">{{ last_remark.remark }}</div>
+            </div>
+
+            <form action="" method="POST" class="mt-5">
+                {% csrf_token %}
+                <div class="row">
+                    {{ villager_form.next_follow_up_date| as_crispy_field }}
+                    {{ remark_form.remark| as_crispy_field }}
+                    <div class="col-3">
+                        <button class="btn btn-default" type="submit">Save</button>
+                    </div>
+                </div>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div {% if message.tags == 'warning' %} class="alert alert-danger"{% endif %}>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+            </form>
+        </div>
+    </div>
+{% endblock %}

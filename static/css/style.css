@@ -1,0 +1,45 @@
+body, html {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e74180+0,e30f6d+100 */
+    background: #e74180; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #e74180 0%, #e30f6d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #e74180 0%, #e30f6d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #e74180 0%, #e30f6d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e74180', endColorstr='#e30f6d', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.app-menu .custom-margin-20{
+    background: white;
+    /*width: 100%;*/
+    height: 100%;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.form-with-white-bg{
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.form-with-white-bg img{
+    border-radius: 10px;
+}
+
+.asteriskField{
+    padding-left: 5px;
+    color: red;
+}

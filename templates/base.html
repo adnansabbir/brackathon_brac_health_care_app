@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BRAC</title>
+
+    {#    ALL CSS HERE#}
+    <link rel="stylesheet" href="{% static 'bootstap_4/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block extra_css %}
+
+    {% endblock %}
+
+</head>
+<body>
+<div class="container p-3">
+    {% block content %}
+
+    {% endblock %}
+</div>
+</body>
+{#ALL JS HERE#}
+<script src="{% static 'js/jquery/jquery-3.2.1.slim.min.js' %}"></script>
+<script src="{% static 'js/popper/popper.min.js' %}"></script>
+<script src="{% static 'bootstap_4/js/bootstrap.min.js' %}"></script>
+
+{% block extra_js %}
+
+{% endblock %}
+
+</html>

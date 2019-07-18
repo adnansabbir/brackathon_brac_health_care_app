@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="pb-5">
+        <div class="form-with-white-bg">
+            <h3 class="text-center">Register Villager</h3>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ villager_form|crispy }}
+                <button type="submit" class="btn btn-success btn-lg float-right">Register</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

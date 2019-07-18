@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="pb-5">
+        <div class="form-with-white-bg">
+            <form action="" method="get">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Villager" name="search_query"
+                           value="{{ search_query }}">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">Search</button>
+                    </span>
+                </div>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div {% if message.tags == 'warning' %} class="alert alert-danger"{% endif %}>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+            </form>
+
+            <div class="row pt-3">
+                <a class="col-12 text-center pr-5 pl-5" href="#">
+                    <img class="img-fluid" src="{% static 'images/packages/anc.jpg' %}" alt="">
+                    <p>Anti Natal Check Up</p>
+                </a>
+
+                <a class="col-12 text-center pr-5 pl-5" href="#">
+                    <img class="img-fluid" src="{% static 'images/packages/adc.jpg' %}" alt="">
+                    <p>After Delivery Check Up</p>
+                </a>
+
+                <a class="col-12 text-center pr-5 pl-5" href="#">
+                    <img class="img-fluid" src="{% static 'images/packages/adt.jpg' %}" alt="">
+                    <p>Anti Natal Check Up</p>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
