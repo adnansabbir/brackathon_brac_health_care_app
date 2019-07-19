@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', include(('apps.HomePage.urls', 'apps.HomePage'), namespace='homepage')),
     path('villager/', include(('apps.Villager.urls', 'apps.Villager'), namespace='villager')),
+    path('e_learning/', include(('apps.ELearning.urls', 'apps.ELearning'), namespace='e_learning')),
     path('admin/', admin.site.urls),
 ]
 
