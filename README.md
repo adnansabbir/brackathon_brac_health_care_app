@@ -15,7 +15,7 @@ Simply Clone the app and store it in your local pc
 ## RUNNING THE APP
 1. Add virtual env in the app. Use python3. [Tutorial](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/26/python-virtual-env/)
 2. Activate the virtual environment (Shown in the above tutorial)
-3. Install all the python dependencies using command `pip freeze > requirement.txt`
+3. Install all the python dependencies using command `pip install -r requirement.txt`
 4. Migrate Database using command `python manage.py makemigrations`
 5. Created a superuser to access admin site `python manage.py createsuperuser`
 6. Run the app in localhost`python manage.py runserver`
